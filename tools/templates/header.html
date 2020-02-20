@@ -1,0 +1,14 @@
+<ul>
+    <li><a href="{% url 'tools:index' %}">Home</a></li>
+
+    {% if request.user.is_superuser %}
+        <li><a >Add Tools</a></li>
+    {% endif %}
+
+    {% if request.user.is_authenticated %}
+        <li><a href="{% url 'logout' %}">Logout</a></li>
+    {% else %}
+        <li><a href="{% url 'login' %}">Login</a></li>
+    {% endif %}
+
+</ul>
