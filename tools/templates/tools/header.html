@@ -1,14 +1,19 @@
-<ul>
-    <li><a href="{% url 'tools:index' %}">Home</a></li>
+<nav class="row">
+    <ul class="col d-flex justify-content-center">
+        <li class="mr-3"><a href="{% url 'tools:index' %}">Home</a></li>
+        <li class="mr-3"><a href="{% url 'tools:index' %}">My Items</a></li>
+        <li class="mr-3"><a href="{% url 'tools:index' %}">User List</a></li>
 
-    {% if request.user.is_superuser %}
-        <li><a >Add Tools</a></li>
-    {% endif %}
 
-    {% if request.user.is_authenticated %}
-        <li><a href="{% url 'logout' %}">Logout</a></li>
-    {% else %}
-        <li><a href="{% url 'login' %}">Login</a></li>
-    {% endif %}
+        {% if request.user.is_superuser %}
+            <li class="mr-3"><a >Add Tools</a></li>
+        {% endif %}
 
-</ul>
+        {% if request.user.is_authenticated %}
+            <li><a href="{% url 'logout' %}">Logout</a></li>
+        {% else %}
+            <li><a href="{% url 'login' %}">Login</a></li>
+        {% endif %}
+
+    </ul>
+</nav>
