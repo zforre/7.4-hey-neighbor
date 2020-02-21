@@ -4,4 +4,9 @@
 
 <h1>This is the user page</h1>
 
+{% for tool in object_list %}
+
+<h2>{{tool.owner}}</h2>
+
+{% endfor %}
 {% endblock content %}

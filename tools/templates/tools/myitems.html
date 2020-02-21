@@ -2,6 +2,15 @@
 
 {% block content %}
 
-<h1>This is the items page</h1>
+<h1>These Tools are Available in the Neighborhood.</h1>
+
+{% for tool in object_list %}
+    
+        <h2>Tool : {{tool.name}}</h2>
+        <h2>Owner : {{tool.owner}}</h2>
+        
+        
+    
+{% endfor %}
 
 {% endblock content %}
