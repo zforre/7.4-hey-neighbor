@@ -1,8 +1,8 @@
 <nav class="row">
     <ul class="col d-flex justify-content-center">
         <h3><li class="mt-3 mr-3"><a href="{% url 'tools:index' %}">Home</a></li></h3>
-        <h3><li class="mt-3 mr-3"><a href="{% url 'tools:index' %}">My Items</a></li></h3>
-        <h3><li class="mt-3 mr-3"><a href="{% url 'tools:index' %}">User List</a></li></h3>
+        <h3><li class="mt-3 mr-3"><a href="{% url 'tools:myitems' %}">My Items</a></li></h3>
+        <h3><li class="mt-3 mr-3"><a href="{% url 'tools:userlist' %}">User List</a></li></h3>
 
 
         {% if request.user.is_superuser %}
