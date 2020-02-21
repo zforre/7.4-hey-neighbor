@@ -1,11 +1,11 @@
 {% extends 'tools/base.html' %}
 
 {% block content %}
-
-
+<h2 class="row justify-content-center">Welcome to Hey Neighbor! <br> This app lets you lend and borrow tools.</h2>
+<button class="btn btn-success mt-3"><a class="create" href="{% url 'accounts:signup' %}">Create an account</a></button>
 
     {% for tool in object_list %}
-
+    
         <h2>
             <a href="index.html">{{tools.name}}</a>
         </h2>
