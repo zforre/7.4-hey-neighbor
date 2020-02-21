@@ -15,10 +15,14 @@ class IndexView(generic.TemplateView):
     #     return Tool.objects.all()
 
 class ListView(generic.ListView):
-    template_name = 'tools/myitems.html'
+    template_name = 'tools/toollist.html'
     model = Tool
 
 class UserView(generic.ListView):
     template_name = 'tools/userlist.html'
+    model = Tool
+
+class TemplateView(generic.TemplateView):
+    template_name = 'tools/myitems.html'
     model = Tool
 
