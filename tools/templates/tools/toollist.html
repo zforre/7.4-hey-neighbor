@@ -2,10 +2,10 @@
 
 {% block content %}
 
-<h1>These Tools are Available in the Neighborhood.</h1>
+<h1>These Tools are Available in your Neighborhood.</h1>
 
 {% for tool in object_list %}
-    
+        <img src="{{tool.photo}}" alt="tool">
         <h2>Tool : {{tool.name}}</h2>
         <h2>Owner : {{tool.owner}}</h2>
         
