@@ -18,6 +18,9 @@ class ListView(generic.ListView):
     template_name = 'tools/toollist.html'
     model = Tool
 
+    def get_queryset(self):
+        if 
+
 class UserView(generic.ListView):
     template_name = 'tools/userlist.html'
     model = Tool
